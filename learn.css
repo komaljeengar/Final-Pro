@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 80px 20px 20px 250px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 20px 20px 400px;    ;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 2px solid #ffbb00;
+    padding-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 10;
+}
+
+.top-nav .logo {
+    height: 40px;
+    width: auto;
+}
+
+.top-nav ul.top-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav ul.top-menu li {
+    margin-left: 20px;
+}
+
+.top-nav ul.top-menu li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.top-nav ul.top-menu li a:hover {
+    background-color: #ffcc00;
+    color: #222;
+    border-radius: 5px;
+}
+
+.top-nav .top-btns {
+    display: flex;
+}
+
+.top-nav .btn {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-left: 15px;
+    padding: 10px 15px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.top-nav .btn:hover {
+    background-color: #ffcc00;
+    color: #222;
+}
+nav {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 80px 0px 0px 0px;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 1.2em;
+    padding: 15px 20px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #333;
+    border-radius: 5px;
+}
+
+.currency {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.currency img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffcc00;
+}
+
+.currency h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.currency p {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #444;
+    font-size: 1.4em;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .currency img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .currency h3 {
+        font-size: 1.2em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Styling for the new sticky navbar */
+.new-nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    height: auto;
+    position: fixed;
+    background-color: rgba(22, 22, 22);
+    /* backdrop-filter: blur(5px); */
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+  }
+  
+  /* New menu styling */
+  .new-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* justify-content: center; */
+  }
+  
+  .new-menu li {
+    margin: 0 15px;
+  }
+  
+  .new-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 15px;
+    font-size: 14px;
+  }
+  
+  .new-menu li a:hover {
+    color: yellow; /* Optional hover effect */
+  }
+  

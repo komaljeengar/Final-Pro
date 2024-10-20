@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crypto Market Page</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1>CryptoHub</h1>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="./index.html" class="active">Marketplace</a></li>
+            <li><a href="../learn.html">Learn</a></li>
+            <li><a href="../home.html">Home</a></li>
+        </ul>
+        <div class="navbar-signin">
+            <!-- <a href="#signin" class="signin-button">Wallet</a> -->
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="maincontainer">
+        <div class="crypto-container">
+            <h2>Listed Cryptos</h2>
+            <div class="container"></div>
+        </div>
+        <div class="simulation-container">
+            <h2>Investment Simulation</h2>
+            <div class="form-group">
+                <label for="investment-amount" class="enteramt">Enter Amount:</label>
+                <input type="number" id="investment-amount" placeholder="Enter amount">
+            </div>
+            <div class="form-group">
+                <label for="crypto-select">Select Cryptocurrency:</label>
+                <select id="crypto-select">
+                    <option value="" disabled selected>Select a crypto</option>
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="litecoin">Litecoin</option>
+                    <option value="cardano">Cardano</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="tether">Tether</option>
+                </select>
+            </div>
+            <button id="simulate-investment">Simulate Investment</button>
+            <div id="simulation-result" class="simulation-result"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

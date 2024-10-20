@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width = device-width, initial-scale = ">
+        <title>
+            Cryptocurrency Website - Hunters Roastathon 
+        </title>
+        <link rel="stylesheet" href="home.css">
+        <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    </head>
+    <body>
+        
+        <div class="maincontainer">
+        <div class="menu">
+            <nav>
+                <img src="images/logo 1.png" class="logo">
+                <ul>
+                    <li> <a href="./marketPlace/index.html">Market</a> </li>
+                    <li> <a href="./learn.html">Learn</a> </li>
+                </ul>
+                <button class ="btn" id="connectButton">Connect Wallet</button>               
+           
+            </nav>
+        </div>
+        <div class="container">
+
+            <!-- <nav>
+                <img src="" class="logo">
+                <ul>
+                    <li> <a href="#">Market</a> </li>
+                    <li> <a href="#">Learn</a> </li>
+                    <li> <a href="#">Features</a> </li>
+                    <li> <a href="#">White Papers</a> </li>
+                </ul>
+                <a href="#" class="btn">EN</a>
+                <a href="#" class="btn">Sign In</a>               
+            </nav> -->
+           
+            <div class="content">
+                <h1>BUY & SELL <br> <span>Crypto</span></h1>
+                <p>World's biggest Cryptocurrency exchange available on web <br> as well as mobile phones</p>
+                <a href="./learn.html" class="btn">EXPLORE MORE</a>
+            </div>
+            <!-- <div class="content">
+                <h1>
+                    <span class="auto-type"></span> <br> 
+                    <span>Crypto</span>
+                </h1>
+                <p>World's biggest Cryptocurrency exchange available on web <br> as well as mobile phones</p>
+                <a href="#" class="btn">EXPLORE MORE</a>
+            </div> -->
+            
+            
+            <div class="coin-list">
+                <div class="coin">
+                    <img src="images/bitcoin.png">
+                    <div>
+                        <h3>$ <span id="bitcoin"></span> </h3>
+                        <p>Bitcoin</p>
+                    </div>
+                </div>
+                <div class="coin">
+                    <img src="images/Ethereum_logo.jpg">
+                    <div>
+                        <h3>$ <span id="ethereum"></span> </h3>
+                        <p>Ethereum</p>
+                    </div>
+                </div>
+                <div class="coin">
+                    <img src="images/dogecoin.png">
+                    <div>
+                        <h3>$ <span id="dogecoin"></span> </h3>
+                        <p>Dogecoin</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["BUY", "SELL", "TRADE"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script> -->
+
+    <script>
+        // Select the connect button element
+        const connectButton = document.getElementById('connectButton');
+
+        // Check if MetaMask is installed
+        if (typeof window.ethereum !== 'undefined') {
+            console.log("MetaMask is installed!");
+
+            // Add click event listener to connect button
+            connectButton.addEventListener('click', connectWallet);
+        } else {
+            console.log("MetaMask is not installed. Please install MetaMask to continue.");
+            connectButton.textContent = 'Install MetaMask';
+            connectButton.onclick = () => {
+                window.open('https://metamask.io/download.html', '_blank');
+            };
+        }
+
+        // Connect wallet function
+        async function connectWallet() {
+            if (window.ethereum) {
+                try {
+                    // Request account access
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    const account = accounts[0]; // Get the first account
+                    console.log(`Connected account: ${account}`);
+                    connectButton.textContent = 'Connected';
+                    connectButton.disabled = true; // Disable the button after successful connection
+                } catch (error) {
+                    console.error('Error connecting to MetaMask:', error);
+                    alert('Failed to connect to MetaMask. Please try again.');
+                }
+            } else {
+                alert('MetaMask is not installed. Please install MetaMask to continue.');
+            }
+        }
+    </script>
+    <script src = "./home.js"></script>
+    </body>
+
+</html>
